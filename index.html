@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Html 5 Audio player</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="audio-img">
+            <img calss="cover">
+        </div>
+        <div id="audio-player">
+            <div id="audio-info">
+                <span class="artist"></span> -
+                <span class="title"></span>
+            </div>
+            <input id="volume" type="range" min="0" max="10" value="5">
+            <br>
+            <div id="audio-buttons">
+                <span>
+                    <button id="prev"></button>
+                    <button id="play"></button>
+                    <button id="pause"></button>
+                    <button id="stop"></button>
+                    <button id="next"></button>
+                </span>
+            </div>
+            <div class="clarfix"></div>
+            <div id="tracker">
+                <div id="progressbar">
+                    <span id="progress"></span>
+                </div>
+                <span id="duration"></span>
+            </div>
+            <div class="clarfix"></div>
+            <ul id="playlist" class="hidden">
+                <li song="Linking park - Papercut.mp3" cover="cover1.jpg" artist="Linking Park">Papercut.mp3</li>
+                <li song="Linking park - One step closer.mp3" cover="cover1.jpg" artist="Linking Park">One step closer.mp3</li>
+                <li song="Linking park - With You.mp3" cover="cover1.jpg" artist="Linking Park">With You.mp3</li>
+                <li song="Linking park - Points of Authority.mp3" cover="cover1.jpg" artist="Linking Park">Points of Authority.mp3</li>
+                <li song="Linking park - Crawling.mp3" cover="cover1.jpg" artist="Linking Park">Crawling.mp3</li>
+                <li song="Linking park - Runaway.mp3" cover="cover1.jpg" artist="Linking Park">Runaway.mp3</li>
+                <li song="Linking park - Be Myself.mp3" cover="cover1.jpg" artist="Linking Park">Be Myself.mp3</li>
+                <li song="Linking park - In The End.mp3" cover="cover1.jpg" artist="Linking Park">In The End.mp3</li>
+                <li song="Linking park - A Place For My Head.mp3" cover="cover1.jpg" artist="Linking Park">A Place For My Head.mp3</li>
+                <li song="Linking park - Forgotten.mp3" cover="cover1.jpg" artist="Linking Park">Forgotten.mp3</li>
+                <li song="Linking park - Cure For The Itch.mp3" cover="cover1.jpg" artist="Linking Park">Cure For The Itch.mp3</li>
+                <li song="Linking park - Pushing Me Away.mp3" cover="cover1.jpg" artist="Linking Park">Pushing Me Away.mp3</li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
