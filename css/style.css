@@ -103,6 +103,7 @@ button#next {
 #playlist {
     cursor:pointer;
     margin: 5px;
+    padding: 0px 20px;
 }
 
 #playlist .active{
