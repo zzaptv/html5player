@@ -59,7 +59,7 @@ input#volume::-webkit-slider-thumb {
     height: 12px;
     width: 12px;
     }
-#buttons {
+#audio-buttons {
     width: 90%;
     display: block;
     margin: 15px auto;
@@ -111,7 +111,7 @@ button#next {
     background: #666;
 }
 
-#progressbar {
+#progressBar {
     width: 80%;
     margin-left: 2%;
     margin-bottom: 20px;
