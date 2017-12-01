@@ -63,6 +63,8 @@ $('#next').click(function () {
         next = $('#playlist li:first-child');
     }
     initAudio (next);
+    $('#pause').show();
+    $('#play').hide();
     audio.play();
     showDuration();
 });
@@ -75,6 +77,8 @@ $('#prev').click(function () {
         prev = $('#playlist li:last-child');
     }
     initAudio (prev);
+    $('#pause').show();
+    $('#play').hide();
     audio.play();
     showDuration();
 });
