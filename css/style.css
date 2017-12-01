@@ -12,6 +12,7 @@ body {
     color: #fff;
     background: url(../img/bg.png);
 }
+
 .clearfix {
     clear: both;
 }
@@ -38,6 +39,10 @@ body {
 .cover {
     width: 100%;
     z-index: 1;
+}
+
+#audio-info{
+	text-align:center;
 }
 
 #audio-info .artist {
@@ -126,6 +131,9 @@ button#next {
     background: url(../img/progress.png) no-repeat;
     height: 10px;
     display: inline-block;
+    position: absolute;
+    top: 9px;
+    left: 8px;
 }
 
 #duration {
