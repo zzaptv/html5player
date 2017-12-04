@@ -62,7 +62,7 @@ $('#next').click(function () {
     if (next.length == 0) {
         next = $('#playlist li:first-child');
     }
-    initAudio (next);
+    initAudio(next);
     $('#pause').show();
     $('#play').hide();
     audio.play();
@@ -76,7 +76,7 @@ $('#prev').click(function () {
     if (prev.length == 0) {
         prev = $('#playlist li:last-child');
     }
-    initAudio (prev);
+    initAudio(prev);
     $('#pause').show();
     $('#play').hide();
     audio.play();
@@ -85,38 +85,43 @@ $('#prev').click(function () {
 
 //Playlist Song Click
 $('#playlist li').click(function () {
-   audio.pause();
-   initAudio($(this));
-   $('#pause').show();
-   $('#play').hide();
-   $('#duration').fadeIn(400);
-   showDuration();
-   audio.play();
+    audio.pause();
+    initAudio($(this));
+    $('#pause').show();
+    $('#play').hide();
+    $('#duration').fadeIn(400);
+    showDuration();
+    audio.play();
 });
 
-
+//seek on a progress bar (click)
+$('#progressBar').click(function (e) { 
+    var percent = e.offsetX / this.offsetWidth;
+    audio.currentTime = percent * audio.duration;
+    this.value = percent / 100; 
+});
 
 //Volume
-$('#volume').change(function(){
-    audio.volume = parseFloat(this.value/10);
+$('#volume').change(function () {
+    audio.volume = parseFloat(this.value / 10);
 });
 
 //Time duration
 function showDuration() {
-        $(audio).bind('timeupdate', function () {
-            //Get hours and minutes
+    $(audio).bind('timeupdate', function () {
+        //Get hours and minutes
         var s = parseInt(audio.currentTime % 60);
         var m = parseInt((audio.currentTime) / 60) % 60;
-            //Add 0 if less then 10
+        //Add 0 if less then 10
         if (s < 10) {
-                s = '0' + s;
+            s = '0' + s;
         }
         $('#duration').html(m + '.' + s);
         var value = 0;
         if (audio.currentTime > 0) {
-                value = Math.floor((100 / audio.duration) * audio.currentTime);
+            value = Math.floor((100 / audio.duration) * audio.currentTime);
         }
         $('#progress').css('width', value + '%');
 
-        });
-    }
+    });
+}
