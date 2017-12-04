@@ -83,6 +83,23 @@ $('#prev').click(function () {
     showDuration();
 });
 
+//Playlist Song Click
+$('#playlist li').click(function () {
+   audio.pause();
+   initAudio($(this));
+   $('#pause').show();
+   $('#play').hide();
+   $('#duration').fadeIn(400);
+   showDuration();
+   audio.play();
+});
+
+
+
+//Volume
+$('#volume').change(function(){
+    audio.volume = parseFloat(this.value/10);
+});
 
 //Time duration
 function showDuration() {
