@@ -109,19 +109,20 @@ $('#volume').change(function () {
 //Time duration
 function showDuration() {
     $(audio).bind('timeupdate', function () {
-        //Get hours and minutes
+        // Get hours and minutes
         var s = parseInt(audio.currentTime % 60);
         var m = parseInt((audio.currentTime) / 60) % 60;
+              
         //Add 0 if less then 10
         if (s < 10) {
             s = '0' + s;
         }
-        $('#duration').html(m + '.' + s);
-        var value = 0;
+        $('#duration').html(m + ':' + s);
+        var progress = 0;
         if (audio.currentTime > 0) {
-            value = Math.floor((100 / audio.duration) * audio.currentTime);
+            progress = Math.floor((100 / audio.duration) * audio.currentTime)-0.5; //to be less then full width
         }
-        $('#progress').css('width', value + '%');
-
+        $('#progress').css('width', progress + '%');
     });
+
 }
