@@ -64,12 +64,17 @@ input#volume::-webkit-slider-thumb {
     height: 12px;
     width: 12px;
     }
+
 #audio-buttons {
     width: 90%;
     display: block;
     margin: 15px auto;
     margin-left: 23px;
-    overflow: auto;
+}
+
+button {
+overflow: auto;
+outline: none !important;
 }
 
 button#play {
