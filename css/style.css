@@ -118,7 +118,7 @@ button#next {
 
 #playlist .active{
     font-weight: bold;
-    padding: 3px;
+    padding: 1px;
     background: #666;
 }
 
@@ -158,5 +158,5 @@ position: relative;
 width: 100%;
 }
 footer {
-position: relative;
+position:relative;
 }
